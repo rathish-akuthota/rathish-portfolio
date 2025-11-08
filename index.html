@@ -87,40 +87,42 @@
         <h2>Contact</h2>
         <p style="color:var(--muted)">Interested in working together or want to say hi? Fill out the form below or email me directly.</p>
 
-        <form action="https://formspree.io/f/xyzlgjvb" method="POST" autocomplete="on" style="display:grid;gap:10px;margin-top:12px">
-          <div class="form-row">
-            <div style="flex:1">
-              <label class="small">Your name</label>
-              <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
-            </div>
-            <div style="flex:1">
-              <label class="small">Your email</label>
-              <input type="email" name="_replyto" placeholder="you@example.com" autocomplete="email" required />
-            </div>
-          </div>
+        <!-- START: Contact form (replace existing form block) -->
+<form action="https://formspree.io/f/xyzlgjvb" method="POST" autocomplete="on" style="display:grid;gap:10px;margin-top:12px">
+  <div class="form-row" style="display:flex;gap:10px;flex-wrap:wrap">
+    <div style="flex:1;min-width:180px">
+      <label class="small">Your name</label>
+      <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+    </div>
 
-          <div style="margin-top:6px">
-            <label class="small">Contact person email (optional)</label>
-            <input type="email" name="contact_person_email" placeholder="contact person email (optional)" autocomplete="email" />
-          </div>
+    <div style="flex:1;min-width:220px">
+      <label class="small">Your email</label>
+      <input type="email" name="_replyto" placeholder="you@example.com" autocomplete="email" required />
+    </div>
 
-          <div style="margin-top:6px">
-            <label class="small">Subject</label>
-            <input type="text" name="subject" placeholder="Subject" autocomplete="organization-title" />
-          </div>
+    <div style="flex:1;min-width:180px">
+      <label class="small">Contact person email (optional)</label>
+      <input type="email" name="contact_person_email" placeholder="contact person email (optional)" autocomplete="email" />
+    </div>
+  </div>
 
-          <div style="margin-top:6px">
-            <label class="small">Message</label>
-            <textarea name="message" placeholder="Message" rows="6" required></textarea>
-          </div>
+  <div style="margin-top:6px">
+    <label class="small">Subject</label>
+    <input type="text" name="subject" placeholder="Subject" autocomplete="organization-title" />
+  </div>
 
-          <input type="hidden" name="_subject" value="Portfolio contact: New message" />
-          <input type="hidden" name="_format" value="plain" />
-          <input type="hidden" name="_next" value="thanks.html" />
+  <div style="margin-top:6px">
+    <label class="small">Message</label>
+    <textarea name="message" placeholder="Message" rows="6" required></textarea>
+  </div>
 
-          <button type="submit" class="btn primary">Send message</button>
-        </form>
+  <input type="hidden" name="_subject" value="Portfolio contact: New message" />
+  <input type="hidden" name="_format" value="plain" />
+  <input type="hidden" name="_next" value="thanks.html" />
 
+  <button type="submit" class="btn primary">Send message</button>
+</form>
+<!-- END: Contact form -->
         <div style="margin-top:12px;color:var(--muted)">
           Or email me directly: <a href="mailto:rathishakuthota2@gmail.com" style="color:var(--accent)">rathishakuthota2@gmail.com</a>
         </div>
