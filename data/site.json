@@ -1,0 +1,23 @@
+{
+  "name": "Rathish Akuthota",
+  "tagline": "Continuous Improvement Engineer — Lean Manufacturing & Process Optimization",
+  "bio": "As a Continuous Improvement Engineer, I bring practical experience in lean manufacturing, PFMEA development, process design, and assembly-line optimization. I’ve used AutoCAD and shop-floor data to redesign workstations and layouts, reducing cycle times and improving balance across lines. I also develop standard work, training materials, and visual controls that reduce defects and improve operator consistency. My goal is to scale production reliably while maintaining safety and quality.",
+  "resumeLink": "",
+  "contactEmail": "rathishakuthota2@gmail.com",
+  "projects": [
+    {
+      "title": "Projects coming soon",
+      "desc": "Add projects from the admin panel.",
+      "image": "",
+      "link": "#"
+    }
+  ],
+  "sections": [
+    {
+      "id": "extra",
+      "title": "Workshops & Training",
+      "content": "Led Kaizen and PFMEA workshops to improve process reliability and reduce downtime.",
+      "image": ""
+    }
+  ]
+}
