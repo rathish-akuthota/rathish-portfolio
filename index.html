@@ -5,96 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rathish Akuthota — Continuous Improvement Engineer</title>
   <style>
-    :root {
-      --bg: #0b0f12;
-      --card: #0f1720;
-      --muted: #94a3b8;
-      --accent: #f8fafc;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-      background: var(--bg);
-      color: var(--accent);
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1000px;
-      padding: 28px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .avatar {
-      width: 56px; height: 56px;
-      border-radius: 9999px;
-      overflow: hidden;
-      background: #1f2937;
-      display: flex; align-items: center; justify-content: center;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 18px;
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      align-items: center;
-      padding: 40px 0;
-    }
-    @media(min-width:800px) {
-      .hero { grid-template-columns: 1fr 360px; }
-    }
-    h1 { font-size: 38px; margin: 0; }
-    .tag { color: var(--muted); margin-top: 8px; }
-    .card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    .primary { background: #f8fafc; color: #0b0f12; }
-    section { margin-top: 26px; }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: var(--muted);
-      font-size: 14px;
-      padding: 20px 0;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #1f2937;
-      background: transparent;
-      color: var(--accent);
-    }
-    textarea { resize: vertical; }
-    .form-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    label.small {
-      font-size: 13px;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 6px;
-    }
+    :root { --bg:#0b0f12; --card:#0f1720; --muted:#94a3b8; --accent:#f8fafc; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:var(--bg);color:var(--accent);line-height:1.6}
+    .container{max-width:1000px;padding:28px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:9999px;overflow:hidden;background:#1f2937;display:flex;align-items:center;justify-content:center}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:40px 0}
+    @media(min-width:800px){.hero{grid-template-columns:1fr 360px}}
+    h1{font-size:38px;margin:0}
+    .tag{color:var(--muted);margin-top:8px}
+    .card{background:var(--card);padding:20px;border-radius:10px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
+    .primary{background:#f8fafc;color:#0b0f12}
+    section{margin-top:26px}
+    footer{text-align:center;margin-top:40px;color:var(--muted);font-size:14px;padding:20px 0}
+    input,textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #1f2937;background:transparent;color:var(--accent)}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project-card{background:#0b1114;padding:12px;border-radius:8px}
+    .section-content img{max-width:100%;border-radius:8px;margin-top:8px}
   </style>
 </head>
 <body>
@@ -102,11 +33,11 @@
     <header>
       <div class="brand">
         <div class="avatar">
-          <img src="rathish_headshot_cropped.png" alt="Rathish" style="width:56px;height:56px;object-fit:cover;display:block" />
+          <img id="avatar-img" src="rathish_headshot_cropped.png" alt="Rathish" style="width:56px;height:56px;object-fit:cover;display:block" />
         </div>
         <div>
-          <div style="font-weight:700">Rathish Akuthota</div>
-          <div class="tag">Continuous Improvement Engineer — Lean Manufacturing & Process Optimization</div>
+          <div id="site-name" style="font-weight:700">Rathish Akuthota</div>
+          <div id="site-tag" class="tag">Continuous Improvement Engineer — Lean Manufacturing & Process Optimization</div>
         </div>
       </div>
       <nav>
@@ -120,48 +51,42 @@
     <main>
       <section class="hero">
         <div>
-          <h1>Hi — I’m Rathish.</h1>
-          <p class="tag">Continuous Improvement Engineer. I redesign layouts, create PFMEAs and standard work, and use AutoCAD and data to improve throughput and quality.</p>
-          <p style="color:var(--muted);margin-top:16px">
+          <h1 id="hero-name">Hi — I’m Rathish.</h1>
+          <p id="hero-tag" class="tag">Continuous Improvement Engineer. I redesign layouts, create PFMEAs and standard work, and use AutoCAD and data to improve throughput and quality.</p>
+          <p id="hero-bio" style="color:var(--muted);margin-top:16px">
             As a Continuous Improvement Engineer, I bring practical experience in lean manufacturing, PFMEA development, process design, and assembly-line optimization.
-            I’ve used AutoCAD and shop-floor data to redesign workstations and layouts, reducing cycle times and improving balance across lines.
-            I also develop standard work, training materials, and visual controls that reduce defects and improve operator consistency.
-            My goal is to scale production reliably while maintaining safety and quality.
           </p>
         </div>
 
         <div class="card" style="display:flex;align-items:center;justify-content:center;height:260px">
-          <img src="rathish_headshot_cropped.png" alt="profile large" style="width:200px;height:200px;border-radius:12px;object-fit:cover" />
+          <img id="hero-img" src="rathish_headshot_cropped.png" alt="profile large" style="width:200px;height:200px;border-radius:12px;object-fit:cover" />
         </div>
       </section>
 
       <section id="about" class="card">
         <h2>About me</h2>
-        <p style="color:var(--muted)">
-          I am a Continuous Improvement Engineer with experience in lean manufacturing, PFMEA development, process design, and layout optimization.
-          Skilled in AutoCAD, Power BI, and problem-solving to reduce cycle times, improve throughput, and enhance quality.
-        </p>
+        <p id="about-text" style="color:var(--muted)">I am a Continuous Improvement Engineer...</p>
       </section>
 
       <section id="projects" class="card">
         <h2>Selected Projects</h2>
-        <p style="color:var(--muted)">Projects coming soon...</p>
+        <div id="projects-grid" class="projects-grid">
+          <!-- project cards injected here -->
+        </div>
       </section>
 
       <section id="resume" class="card">
         <h2>Resume</h2>
-        <p style="color:var(--muted)">
-          Download my resume to learn more about my experience and background. (PDF download available upon request.)
-        </p>
+        <p id="resume-text" style="color:var(--muted)">Download my resume to learn more about my experience and background.</p>
+        <a id="resume-link" class="btn primary" href="#" style="pointer-events:none;opacity:0.6">Download PDF (coming soon)</a>
       </section>
 
       <section id="contact" class="card">
         <h2>Contact</h2>
         <p style="color:var(--muted)">Interested in working together or want to say hi? Fill out the form below or email me directly.</p>
 
-        <!-- START: Updated Formspree Contact Form -->
         <form action="https://formspree.io/f/xyzlgjvb" method="POST" autocomplete="on" style="display:grid;gap:10px;margin-top:12px">
-          <div class="form-row">
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
             <div style="flex:1;min-width:180px">
               <label class="small">Your name</label>
               <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
@@ -170,7 +95,10 @@
               <label class="small">Your email</label>
               <input type="email" name="_replyto" placeholder="you@example.com" autocomplete="email" required />
             </div>
-          
+            <div style="flex:1;min-width:220px">
+              <label class="small">Contact person email (optional)</label>
+              <input type="email" name="contact_person_email" placeholder="contact person email (optional)" autocomplete="email" />
+            </div>
           </div>
 
           <div style="margin-top:6px">
@@ -189,22 +117,103 @@
 
           <button type="submit" class="btn primary">Send message</button>
         </form>
-        <!-- END: Contact Form -->
 
         <div style="margin-top:12px;color:var(--muted)">
           Or email me directly:
-          <a href="mailto:rathishakuthota2@gmail.com" style="color:var(--accent)">
-            rathishakuthota2@gmail.com
-          </a>
+          <a id="direct-email" href="mailto:rathishakuthota2@gmail.com" style="color:var(--accent)">rathishakuthota2@gmail.com</a>
         </div>
       </section>
+
+      <div id="extra-sections"></div>
     </main>
 
     <footer>
-      © <span id="year">2025</span> Rathish Akuthota — Built with ❤️
+      © <span id="year">2025</span> <span id="footer-name">Rathish Akuthota</span> — Built with ❤️
     </footer>
   </div>
 
-  <script>document.getElementById('year').innerText = new Date().getFullYear()</script>
+  <script>
+    // fallback defaults (safe if data file missing)
+    const FALLBACK = {
+      name: "Rathish Akuthota",
+      tagline: "Continuous Improvement Engineer — Lean Manufacturing & Process Optimization",
+      bio: "As a Continuous Improvement Engineer, I bring practical experience in lean manufacturing, PFMEA development, process design, and assembly-line optimization.",
+      resumeLink: "",
+      contactEmail: "rathishakuthota2@gmail.com",
+      projects: [],
+      sections: []
+    };
+
+    async function loadSiteData() {
+      try {
+        const res = await fetch('/data/site.json', {cache: "no-store"});
+        if (!res.ok) throw new Error("No data file");
+        const data = await res.json();
+        return Object.assign({}, FALLBACK, data);
+      } catch (e) {
+        return FALLBACK;
+      }
+    }
+
+    function renderProjects(projects) {
+      const container = document.getElementById('projects-grid');
+      container.innerHTML = '';
+      if (!projects || projects.length === 0) {
+        container.innerHTML = '<p style="color:var(--muted)">Projects coming soon...</p>';
+        return;
+      }
+      projects.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        const imgPart = p.image ? `<div style="height:120px;overflow:hidden;border-radius:8px;margin-bottom:8px"><img src="${p.image}" style="width:100%;height:100%;object-fit:cover"/></div>` : '';
+        card.innerHTML = imgPart + `<div style="font-weight:600">${p.title}</div><div style="color:var(--muted);margin-top:6px">${p.desc || ''}</div>${p.link? `<div style="margin-top:8px"><a href="${p.link}" style="color:var(--accent)">View</a></div>`:''}`;
+        container.appendChild(card);
+      });
+    }
+
+    function renderSections(sections) {
+      const extra = document.getElementById('extra-sections');
+      extra.innerHTML = '';
+      if (!sections) return;
+      sections.forEach(s => {
+        const sec = document.createElement('section');
+        sec.id = s.id || '';
+        sec.className = 'card';
+        sec.innerHTML = `<h2>${s.title}</h2><div class="section-content"><div style="color:var(--muted)">${s.content}</div>${s.image ? `<img src="${s.image}" alt="${s.title}">` : ''}</div>`;
+        extra.appendChild(sec);
+      });
+    }
+
+    (async () => {
+      const data = await loadSiteData();
+      // Basic fields
+      document.getElementById('site-name').innerText = data.name;
+      document.getElementById('site-tag').innerText = data.tagline;
+      document.getElementById('hero-name').innerText = `Hi — I’m ${data.name.split(' ')[0] || data.name}.`;
+      document.getElementById('hero-tag').innerText = data.tagline;
+      document.getElementById('hero-bio').innerText = data.bio;
+      document.getElementById('about-text').innerText = data.bio;
+      document.getElementById('footer-name').innerText = data.name;
+      if (data.resumeLink) {
+        const rl = document.getElementById('resume-link');
+        rl.href = data.resumeLink;
+        rl.style.pointerEvents = 'auto';
+        rl.style.opacity = '1';
+      }
+      const direct = document.getElementById('direct-email');
+      direct.href = `mailto:${data.contactEmail}`;
+      renderProjects(data.projects);
+      renderSections(data.sections);
+
+      // Replace avatar/hero image if provided (optional)
+      // Default uses existing rathish_headshot_cropped.png in repo root or assets
+      if (data.avatarImage) {
+        document.getElementById('avatar-img').src = data.avatarImage;
+      }
+      if (data.heroImage) {
+        document.getElementById('hero-img').src = data.heroImage;
+      }
+    })();
+  </script>
 </body>
 </html>
