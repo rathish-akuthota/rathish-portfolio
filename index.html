@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,28 +7,23 @@
   <style>
     :root{--bg:#0b0f12;--card:#0f1720;--muted:#94a3b8;--accent:#f8fafc}
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg);color:var(--accent);line-height:1.5}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg);color:var(--accent);line-height:1.6}
     .container{max-width:1000px;padding:28px;margin:0 auto}
     header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px}
     .avatar{width:56px;height:56px;border-radius:9999px;overflow:hidden;background:#1f2937;display:flex;align-items:center;justify-content:center}
-    nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
     .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:40px 0}
     @media(min-width:800px){.hero{grid-template-columns:1fr 360px}}
-    h1{font-size:34px;margin:0}
+    h1{font-size:38px;margin:0}
     .tag{color:var(--muted);margin-top:8px}
     .card{background:var(--card);padding:20px;border-radius:10px}
     .btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
     .primary{background:#f8fafc;color:#0b0f12}
-    .secondary{border:1px solid #334155;color:var(--muted);background:transparent;padding:9px 14px;border-radius:8px;text-decoration:none}
     section{margin-top:26px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    @media(max-width:720px){.grid-3{grid-template-columns:1fr}}
     footer{text-align:center;margin-top:40px;color:var(--muted);font-size:14px;padding:20px 0}
-    .projects-empty{color:var(--muted)}
-    .contact input{width:100%;padding:10px;border-radius:6px;border:1px solid #1f2937;background:transparent;color:var(--accent)}
-    ul{margin:0;padding-left:20px}
-    .skills span{display:inline-block;margin:6px 6px 0 0;padding:6px 10px;background:#0b1114;border-radius:6px;color:var(--accent);font-size:14px}
+    input,textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #1f2937;background:transparent;color:var(--accent)}
+    textarea{resize:vertical}
   </style>
 </head>
 <body>
@@ -49,8 +43,6 @@
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
-        <!-- Resume download currently disabled -->
-        <a class="secondary" href="#" title="Resume download disabled for now" style="margin-left:14px;pointer-events:none;opacity:0.6">Download PDF</a>
       </nav>
     </header>
 
@@ -58,116 +50,56 @@
       <section class="hero">
         <div>
           <h1>Hi — I’m Rathish.</h1>
-          <div class="tag">Continuous Improvement Engineer. I redesign layouts, create PFMEAs and standard work, and use AutoCAD and data to improve throughput and quality.</div>
-          <p style="color:var(--muted);margin-top:16px">As a Continuous Improvement Engineer, I bring practical experience in lean manufacturing, PFMEA development, process design, and assembly-line optimization. I’ve used AutoCAD and shop-floor data to redesign workstations and layouts, reducing cycle times and improving balance across lines. I also develop standard work, training materials, and visual controls that reduce defects and improve operator consistency. My goal is to scale production reliably while maintaining safety and quality.</p>
-
-          <div style="margin-top:18px">
-            <a class="btn primary" href="#projects">See my work</a>
-            <a class="btn secondary" href="mailto:rathishakuthota2@gmail.com">Get in touch</a>
-          </div>
+          <p class="tag">Continuous Improvement Engineer. I redesign layouts, create PFMEAs and standard work, and use AutoCAD and data to improve throughput and quality.</p>
+          <p style="color:var(--muted);margin-top:16px">
+            As a Continuous Improvement Engineer, I bring practical experience in lean manufacturing, PFMEA development, process design, and assembly-line optimization.
+            I’ve used AutoCAD and shop-floor data to redesign workstations and layouts, reducing cycle times and improving balance across lines.
+            I also develop standard work, training materials, and visual controls that reduce defects and improve operator consistency.
+            My goal is to scale production reliably while maintaining safety and quality.
+          </p>
         </div>
 
-        <div>
-          <div class="card" style="display:flex;align-items:center;justify-content:center;height:260px">
-            <img src="rathish_headshot_cropped.png" alt="profile large" style="width:200px;height:200px;border-radius:12px;object-fit:cover" />
-          </div>
+        <div class="card" style="display:flex;align-items:center;justify-content:center;height:260px">
+          <img src="rathish_headshot_cropped.png" alt="profile large" style="width:200px;height:200px;border-radius:12px;object-fit:cover" />
         </div>
       </section>
 
       <section id="about" class="card">
-        <h2 style="margin-top:0">About me</h2>
-        <p style="color:var(--muted)">As a Continuous Improvement Engineer, I bring practical experience in lean manufacturing, PFMEA development, process design, and assembly-line optimization. I’ve used AutoCAD and shop-floor data to redesign workstations and layouts, reducing cycle times and improving balance across lines. I also develop standard work, training materials, and visual controls that reduce defects and improve operator consistency. My goal is to scale production reliably while maintaining safety and quality.</p>
-
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px">
-          <div style="background:#0b1114;padding:12px;border-radius:8px"><div style="color:var(--muted);font-size:13px">Tools</div><div style="margin-top:6px">AutoCAD · SolidWorks · Power BI · Excel</div></div>
-          <div style="background:#0b1114;padding:12px;border-radius:8px"><div style="color:var(--muted);font-size:13px">Certifications</div><div style="margin-top:6px">Lean Six Sigma Green Belt</div></div>
-          <div style="background:#0b1114;padding:12px;border-radius:8px"><div style="color:var(--muted);font-size:13px">Work</div><div style="margin-top:6px">Process improvement · PFMEA · Layout design</div></div>
-        </div>
+        <h2>About me</h2>
+        <p style="color:var(--muted)">I am a Continuous Improvement Engineer with experience in lean manufacturing, PFMEA development, process design, and layout optimization.
+          Skilled in AutoCAD, Power BI, and problem-solving to reduce cycle times, improve throughput, and enhance quality.</p>
       </section>
 
-      <section id="projects">
-        <h2>Selected projects</h2>
-        <p class="projects-empty">Projects coming soon...</p>
+      <section id="projects" class="card">
+        <h2>Selected Projects</h2>
+        <p style="color:var(--muted)">Projects coming soon...</p>
       </section>
 
       <section id="resume" class="card">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <h2 style="margin:0">Resume</h2>
-          <a class="btn primary" href="#" style="pointer-events:none;opacity:0.6">Download PDF</a>
-        </div>
-
-        <h3 style="margin-top:16px">Summary</h3>
-        <p style="color:var(--muted)">Certified Lean Six Sigma Green Belt Industrial Engineer with proven expertise in manufacturing process optimization, layout design, and lean implementation. Skilled in AutoCAD, Power BI, and PFMEA, with a track record of improving productivity, reducing cycle times, and enhancing line balance through data-driven decision-making.</p>
-
-        <h3 style="margin-top:12px">Skills</h3>
-        <div class="skills" style="margin-top:8px">
-          <span>AutoCAD</span><span>SolidWorks</span><span>Power BI</span><span>Visio</span><span>Excel</span><span>GSS ERP</span><span>Lean Six Sigma</span>
-        </div>
-
-        <h3 style="margin-top:12px">Experience</h3>
-        <div style="margin-top:8px;display:grid;gap:12px">
-          <div style="background:#0b1114;padding:12px;border-radius:8px">
-            <div style="font-weight:700">Continuous Improvement Engineer — Z-Tronix.Inc</div>
-            <div style="color:var(--muted);font-size:13px">Sep 2024 - Present</div>
-            <ul style="margin-top:8px;color:var(--muted)">
-              <li>Implemented one-piece flow and 5S systems, reducing WIP and improving line productivity by 15%.</li>
-              <li>Redesigned layouts with AutoCAD to boost ergonomics and streamline material flow.</li>
-              <li>Conducted time studies and work measurement to validate workforce models and reduce cycle times.</li>
-              <li>Cut picking and staging time by 40% by reengineering warehouse layout and QR bin labeling.</li>
-              <li>Developed digital work instructions and SOPs, reducing training time by 20%.</li>
-              <li>Facilitated PFMEA, RCA (8D), and CAPA workshops to address downtime and quality defects.</li>
-            </ul>
-          </div>
-
-          <div style="background:#0b1114;padding:12px;border-radius:8px">
-            <div style="font-weight:700">Teaching Associate — California State University, Los Angeles</div>
-            <div style="color:var(--muted);font-size:13px">Aug 2023 - May 2024</div>
-            <ul style="margin-top:8px;color:var(--muted)">
-              <li>Collaborated on the design and prototyping of an underwater ROV.</li>
-              <li>Delivered technical training in engineering design and manufacturing methods.</li>
-            </ul>
-          </div>
-
-          <div style="background:#0b1114;padding:12px;border-radius:8px">
-            <div style="font-weight:700">Production Supervisor — Singareni Collieries Company Limited</div>
-            <div style="color:var(--muted);font-size:13px">Nov 2021 - Jul 2023</div>
-            <ul style="margin-top:8px;color:var(--muted)">
-              <li>Managed daily production and workshop operations, improving equipment effectiveness.</li>
-              <li>Conducted time and motion studies to improve manpower utilization.</li>
-              <li>Oversaw material handling, inventory control, and just-in-time delivery processes.</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3 style="margin-top:12px">Education</h3>
-        <div style="background:#0b1114;padding:12px;border-radius:8px;margin-top:8px">
-          <div style="font-weight:700">California State University, Los Angeles</div>
-          <div style="color:var(--muted);font-size:13px">Master of Science (M.S.), Industrial Management — Aug 2022 - May 2024</div>
-          <div style="margin-top:8px;font-weight:700">Mahatma Gandhi Institute of Technology</div>
-          <div style="color:var(--muted);font-size:13px">Bachelor of Technology, Mechanical Engineering — Jul 2018 - Aug 2021</div>
-        </div>
-
-        <h3 style="margin-top:12px">Certifications</h3>
-        <div style="background:#0b1114;padding:12px;border-radius:8px;margin-top:8px">Lean Six Sigma Green Belt · Microsoft Excel</div>
-
-        <h3 style="margin-top:12px">Achievements & Awards</h3>
-        <div style="background:#0b1114;padding:12px;border-radius:8px;margin-top:8px">Outstanding Academic Excellence Award — California State University, Los Angeles (2023 & 2024). Led Kaizen and PFMEA workshops improving process reliability and reducing downtime.</div>
+        <h2>Resume</h2>
+        <p style="color:var(--muted)">Download my resume to learn more about my experience and background. (PDF download is available upon request.)</p>
       </section>
 
       <section id="contact" class="card">
-        <h2 style="margin-top:0">Contact</h2>
-        <p style="color:var(--muted)">Interested in working together or want to say hi? Send me an email and I’ll reply ASAP.</p>
+        <h2>Contact</h2>
+        <p style="color:var(--muted)">Interested in working together or want to say hi? Fill out the form below or email me directly.</p>
 
-        <form action="mailto:rathishakuthota2@gmail.com" method="get" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
-          <input name="name" placeholder="Your name" />
-          <input name="subject" placeholder="Subject" />
-          <input name="body" placeholder="Message" style="grid-column:1 / -1;height:80px" />
-          <button type="submit" class="btn primary" style="grid-column:1 / -1">Send email</button>
+        <form action="https://formspree.io/f/xyzlgjvb" method="POST" autocomplete="on" style="display:grid;gap:10px;margin-top:12px">
+          <div style="display:flex;gap:10px">
+            <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+            <input type="text" name="subject" placeholder="Subject" autocomplete="organization-title" />
+          </div>
+          <textarea name="message" placeholder="Message" rows="6" required></textarea>
+          <input type="hidden" name="_subject" value="New contact from portfolio" />
+          <input type="hidden" name="_format" value="plain" />
+          <input type="hidden" name="_next" value="thanks.html" />
+          <button type="submit" class="btn primary">Send message</button>
         </form>
 
-        <div style="margin-top:12px;color:var(--muted)">Or email me directly: <a style="color:var(--accent)" href="mailto:rathishakuthota2@gmail.com">rathishakuthota2@gmail.com</a></div>
+        <div style="margin-top:12px;color:var(--muted)">
+          Or email me directly: <a href="mailto:rathishakuthota2@gmail.com" style="color:var(--accent)">rathishakuthota2@gmail.com</a>
+        </div>
       </section>
-
     </main>
 
     <footer>
